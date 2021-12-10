@@ -63,38 +63,46 @@ const SignIn = () => {
 	return (
 		<Layout title='Sign in'>
 			<div className='grid grid-cols-1 md:grid-cols-5 h-full'>
-				<div className='col-span-1 md:col-span-2 flex items-center justify-center'>
-					<form onSubmit={loginData.handleSubmit} className='w-[90%]'>
-						<p className='text-2xl mb-4 fown-weight-bold'> Sign in </p>
-						<div className='form-group'>
-							<input
-								id='username'
-								type='text'
-								className='input input-primary'
-								placeholder='Matric Number'
-								{...loginData.getFieldProps('username')}
-							/>
-							{loginData.touched.username && loginData.errors.username ? (
-								<ValidationError message={loginData.errors.username} />
-							) : null}
-						</div>
-						<div className='form-group mt-2'>
-							<PasswordInput
-								id='password'
-								placeholder='Password'
-								{...loginData.getFieldProps('password')}
-							/>
-							{loginData.touched.password && loginData.errors.password ? (
-								<ValidationError message={loginData.errors.password} />
-							) : null}
-						</div>
-						<button
-							type='submit'
-							className='btn btn-primary btn-block capitalize mt-4'
-							disabled={loading}>
-							Sign in
-						</button>
-					</form>
+				<div className='col-span-1 md:col-span-2 flex flex-col md:flex-row md:items-center'>
+					<div className='h-[40%] bg-login-hero bg-auditorium-center bg-no-repeat bg-auditorium-size md:hidden'>
+						<div className='bg-primary w-full h-full opacity-75'></div>
+					</div>
+					<div className='flex justify-center pt-10 md:pt-0 rounded-t-[2rem] bg-white mt-[-30px] z-50 md:w-full'>
+						<form onSubmit={loginData.handleSubmit} className='w-[90%]'>
+							<p className='text-4xl text-primary md:text-2xl md:text-base-content font-weight-bold mb-7 md:mb-4'>
+								{' '}
+								Sign in{' '}
+							</p>
+							<div className='form-group'>
+								<input
+									id='username'
+									type='text'
+									className='input input-primary'
+									placeholder='Matric Number'
+									{...loginData.getFieldProps('username')}
+								/>
+								{loginData.touched.username && loginData.errors.username ? (
+									<ValidationError message={loginData.errors.username} />
+								) : null}
+							</div>
+							<div className='form-group mt-2'>
+								<PasswordInput
+									id='password'
+									placeholder='Password'
+									{...loginData.getFieldProps('password')}
+								/>
+								{loginData.touched.password && loginData.errors.password ? (
+									<ValidationError message={loginData.errors.password} />
+								) : null}
+							</div>
+							<button
+								type='submit'
+								className='btn btn-primary btn-block capitalize mt-4'
+								disabled={loading}>
+								Sign in
+							</button>
+						</form>
+					</div>
 				</div>
 				<div className='hidden md:block md:col-span-3 bg-primary'>
 					<div className='flex flex-col h-full justify-center items-center'>

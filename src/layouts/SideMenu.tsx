@@ -71,13 +71,13 @@ const SideMenu = ({ children }: { children: any }) => {
 							</a>
 						</Link>
 					</li>
-					<li>
+					{/* <li>
 						<Link href='/dashboard/settings'>
 							<a>
 								<CogIcon className='h-6 w-6 mr-4' /> Settings
 							</a>
 						</Link>
-					</li>
+					</li> */}
 					<li>
 						<a onClick={doLogOut}>
 							<LogoutIcon className='h-6 w-6 mr-4' /> Logout
