@@ -14,9 +14,7 @@ const Header = () => {
 
 	const user: IUserProfile = server.user;
 
-	useEffect(() => {
-		console.log(store.getState());
-	}, []);
+	useEffect(() => {}, []);
 
 	const shouldHide = exclude.includes(router.pathname);
 
