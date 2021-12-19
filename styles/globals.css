@@ -3,99 +3,99 @@
 @tailwind utilities;
 
 :root {
-  --btn-text-case: capitalize;
+	--btn-text-case: capitalize;
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: Poppins;
+	padding: 0;
+	margin: 0;
+	font-family: Poppins;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/poppins/Poppins-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'Poppins';
+	src: url('/fonts/poppins/Poppins-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 /* Customizing scroll-bar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+	width: 6px;
+	height: 6px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: gainsboro;
-  border-radius: 5px;
+	background: gainsboro;
+	border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #3e2abe;
-  border-radius: 5px;
+	background: #3e2abe;
+	border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #3826ab;
+	background: #3826ab;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .container {
-  height: 100vh;
-  @apply max-w-[1530px];
+	height: 100vh;
+	@apply max-w-[1530px];
 }
 
 .btn {
-  @apply rounded-[3px] focus:outline-none;
+	@apply rounded-[3px] focus:outline-none;
 }
 
 .btn-clear {
-  @apply btn-primary !bg-transparent !text-black border-0 hover:bg-transparent;
+	@apply btn-primary !bg-transparent !text-black border-0 hover:bg-transparent;
 }
 
 .input {
-  @apply focus:outline-none px-2 py-1 rounded-[3px] text-lg w-full;
+	@apply focus:outline-none px-2 py-1 rounded-[3px] text-lg w-full;
 }
 
 #nprogress .bar {
-  @apply !bg-pink-500 !h-[4px];
+	@apply !bg-pink-500 !h-[4px];
 }
 
 #nprogress .spinner {
-  left: 15px !important;
+	left: 15px !important;
 }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px #ec4899, 0 0 5px #ec4899 !important;
+	box-shadow: 0 0 10px #ec4899, 0 0 5px #ec4899 !important;
 }
 #nprogress .spinner-icon {
-  border-top-color: #ec4899 !important;
-  border-left-color: #ec4899 !important;
+	border-top-color: #ec4899 !important;
+	border-left-color: #ec4899 !important;
 }
 
 .react-calendar {
-  border: 0 !important;
+	border: 0 !important;
 }
 
 .react-calendar__tile--active {
-  @apply rounded-full;
+	@apply rounded-full;
 }

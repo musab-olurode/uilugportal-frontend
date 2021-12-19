@@ -30,9 +30,6 @@ module.exports = {
 					900: '#7d5b08',
 				},
 			},
-			backgroundImage: {
-				'login-hero': "url('/images/auditorium-bg.png')",
-			},
 			backgroundPosition: {
 				'auditorium-center': '-80px, center',
 			},
