@@ -1,7 +1,5 @@
 module.exports = {
-	mode: 'jit',
-	purge: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
-	darkMode: false, // or 'media' or 'class'
+	content: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
 	theme: {
 		extend: {
 			colors: {
@@ -42,9 +40,6 @@ module.exports = {
 				'auditorium-size': '130%',
 			},
 		},
-	},
-	variants: {
-		extend: {},
 	},
 	plugins: [require('daisyui')],
 	daisyui: {

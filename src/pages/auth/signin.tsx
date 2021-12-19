@@ -5,6 +5,7 @@ import { useState } from 'react';
 import ValidationError from '../../components/ValidationError';
 import PasswordInput from '../../components/PasswordInput';
 import loginBg from '../../../public/images/login-img.png';
+import loginMobileBg from '../../../public/images/auditorium-bg.png';
 import Image from 'next/image';
 import { useLoadingProgress } from '../../services/loadingProgress';
 import { login } from '../../helpers/api/auth';
@@ -64,8 +65,15 @@ const SignIn = () => {
 		<Layout title='Sign in'>
 			<div className='grid grid-cols-1 md:grid-cols-5 h-full'>
 				<div className='col-span-1 md:col-span-2 flex flex-col md:flex-row md:items-center'>
-					<div className='h-[40%] bg-login-hero bg-auditorium-center bg-no-repeat bg-auditorium-size md:hidden'>
-						<div className='bg-primary w-full h-full opacity-75'></div>
+					<div className='h-[40%] bg-auditorium-center bg-no-repeat bg-auditorium-size md:hidden flex overflow-hidden relative'>
+						<Image
+							src={loginMobileBg}
+							alt='auditorium'
+							width={900}
+							height={500}
+							className='aspect-video object-cover rotate-1 scale-105'
+						/>
+						<div className='bg-primary w-full h-full opacity-60 absolute'></div>
 					</div>
 					<div className='flex justify-center pt-10 md:pt-0 rounded-t-[2rem] bg-white mt-[-30px] z-50 md:w-full'>
 						<form onSubmit={loginData.handleSubmit} className='w-[90%]'>
