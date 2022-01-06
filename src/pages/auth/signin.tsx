@@ -1,7 +1,7 @@
 import Layout from '../../layouts/Layout';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ValidationError from '../../components/ValidationError';
 import PasswordInput from '../../components/PasswordInput';
 import loginBg from '../../../public/images/login-img.png';
@@ -75,7 +75,7 @@ const SignIn = () => {
 						/>
 						<div className='bg-primary w-full h-full opacity-60 absolute'></div>
 					</div>
-					<div className='flex justify-center pt-10 md:pt-0 rounded-t-[2rem] bg-white mt-[-30px] z-50 md:w-full'>
+					<div className='flex justify-center pt-10 md:pt-0 rounded-t-[2rem] bg-base-100 mt-[-30px] z-50 md:w-full'>
 						<form onSubmit={loginData.handleSubmit} className='w-[90%]'>
 							<p className='text-4xl text-primary md:text-2xl md:text-base-content font-weight-bold mb-7 md:mb-4'>
 								{' '}

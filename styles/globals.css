@@ -94,8 +94,13 @@ body {
 
 .react-calendar {
 	border: 0 !important;
+	@apply dark:!bg-base-200;
 }
 
 .react-calendar__tile--active {
 	@apply rounded-full;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+	@apply dark:!text-gray-500;
 }

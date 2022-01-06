@@ -27,7 +27,7 @@ const Page = ({ children, user }: { children: any; user: IUserProfile }) => {
 									<input
 										type='text'
 										placeholder='What do you want to learn today'
-										className='w-full !pr-16 input bg-gray-200 !rounded-xl disabled'
+										className='w-full !pr-16 input bg-gray-200 dark:bg-base-100 dark:border-gray-200 !rounded-xl disabled'
 									/>
 									<button className='absolute top-0 right-0 rounded-l-none btn btn-clear'>
 										<SearchIcon className='w-6 h-6' />
