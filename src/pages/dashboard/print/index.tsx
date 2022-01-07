@@ -26,6 +26,7 @@ export const getServerSideProps = withAuth(
 
 const Print: NextPage<State> = ({ server }) => {
 	const user: IUserProfile = server.user;
+	// eslint-disable-next-line no-unused-vars
 	const [cookie, removeCookie] = useCookies(['token']);
 	const [sessions, setSessions] = useState<string[]>([]);
 	const [printables, setPrintables] = useState<any>({});

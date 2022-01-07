@@ -33,6 +33,7 @@ const Results: NextPage<State> = ({ server }) => {
 		total: 0,
 	});
 	const user: IUserProfile = server.user;
+	// eslint-disable-next-line no-unused-vars
 	const [cookie, removeCookie] = useCookies(['token']);
 	const { showLoading } = useLoadingProgress();
 	const [GPA, setGPA] = useState<obj<number>>({});
