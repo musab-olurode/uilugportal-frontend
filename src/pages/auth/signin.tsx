@@ -112,7 +112,7 @@ const SignIn = () => {
 						</form>
 					</div>
 					<a
-						className='w-full flex justify-end absolute bottom-2 right-5'
+						className='w-full flex justify-end absolute bottom-16 md:bottom-2 right-5'
 						href='https://github.com/musab-olurode/uilugportal-frontend'
 						target='_blank'
 						rel='noreferrer'>
