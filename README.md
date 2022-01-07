@@ -12,7 +12,7 @@ Other things to include:
 
 ## Screenshots
 
-![](https://user-images.githubusercontent.com/49688259/148434190-7a18646c-884c-4b64-9f4a-b090e8ef4e36.png)
+![](https://user-images.githubusercontent.com/49688259/148561184-17d8337a-d251-4df4-8c6a-2ca34e7267eb.png)
 ![](https://user-images.githubusercontent.com/49688259/148434304-f8b4b8e1-d3fe-442e-abc8-708679c343ab.png)
 ![](https://user-images.githubusercontent.com/49688259/148434364-f50a8ee4-a883-4d29-aa27-592cc9bb2512.png)
 ![](https://user-images.githubusercontent.com/49688259/148434423-9407e223-e9f0-4497-8a27-a646127a1ddc.png)
