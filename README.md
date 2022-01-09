@@ -3,12 +3,10 @@
 The University of Ilorin student portal, made for students, by students.
 I basically got fed up of the UI, UX, and features, (or lack thereof) of the actual university portal and decided to build mine instead. Seriously, the actual portal is **the** worst piece of software i've ever used
 
-Other things to include:
-
 -   This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It works along-side the [backend](https://github.com/musab-olurode/uilugportal-backend) written in [Node.js](https://nodejs.org/en/).
 -   Its currently at its first release (1.0 if you will), with most of the existing 'READ' features of the university's version and a couple of other features. changelog [here](CHANGELOG.md).
--   Working version [here](https://uilugportal.vercel.app/auth/signin)
--   I **do not** think there are any projects like this, for UNILORIN at least. But even if there are, i believe this is one of a kind.
+-   Working version [here](https://uilugportal.vercel.app)
+-   I **do not** think there are any projects like this, for UNILORIN at least. But even if there are, I believe this is one of a kind.
 
 ## Screenshots
 
