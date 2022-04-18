@@ -3,10 +3,10 @@
 The University of Ilorin student portal, made for students, by students.
 I basically got fed up of the UI, UX, and features, (or lack thereof) of the actual university portal and decided to build mine instead. Seriously, the actual portal is **the** worst piece of software i've ever used
 
--   This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It works along-side the [backend](https://github.com/musab-olurode/uilugportal-backend) written in [Node.js](https://nodejs.org/en/).
--   Its currently at its first release (1.0 if you will), with most of the existing 'READ' features of the university's version and a couple of other features. changelog [here](CHANGELOG.md).
--   Working version [here](https://uilugportal.vercel.app)
--   I **do not** think there are any projects like this, for UNILORIN at least. But even if there are, I believe this is one of a kind.
+- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It works along-side the [backend](https://github.com/musab-olurode/uilugportal-backend) written in [Node.js](https://nodejs.org/en/).
+- It's currently at its first release (1.0 if you will), with most of the existing 'READ' features of the university's version and a couple of other features. changelog [here](CHANGELOG.md).
+- Working version [here](https://uilugportal.vercel.app)
+- I **do not** think there are any projects like this, for UNILORIN at least. But even if there are, I believe this is one of a kind.
 
 ## Screenshots
 
@@ -18,9 +18,9 @@ I basically got fed up of the UI, UX, and features, (or lack thereof) of the act
 
 ## Dependencies
 
--   [Node.js 14.17.5 or later](https://nodejs.org/en/)
--   [NextJs](https://nextjs.org/)
--   [Typescript 4.5.2 or later](https://www.typescriptlang.org/)
+- [Node.js 14.17.5 or later](https://nodejs.org/en/)
+- [NextJs](https://nextjs.org/)
+- [Typescript 4.5.2 or later](https://www.typescriptlang.org/)
 
 ## Installation/Getting Started
 
@@ -30,7 +30,7 @@ First, clone the project:
 git clone https://github.com/musab-olurode/uilugportal-frontend.git
 ```
 
-CD into the project direcetory:
+CD into the project directory:
 
 ```bash
 cd uilugportal-frontend
@@ -69,9 +69,9 @@ You can work on the frontend only with the default configuration (connected to t
 
 ## Upcoming Featues
 
--   Assignments scheduling
--   Course materials sharing
--   Task planning/scheduling
+- Assignments scheduling
+- Course materials sharing
+- Task planning/scheduling
 
 <!-- ## Tests
 
@@ -97,7 +97,7 @@ General instructions on _how_ to contribute can be found [here](CONTRIBUTING.md)
 
 Copyright 2021 Olurode Mus'ab
 
--   [LICENSE](LICENSE)
+- [LICENSE](LICENSE)
 
 ---
 

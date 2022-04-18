@@ -35,7 +35,12 @@ const Header = () => {
 							onClick={() => router.push('/dashboard/profile')}>
 							<div className='avatar'>
 								<div className='rounded-full w-10 h-10'>
-									<Image src={user.avatar} width={60} height={60} alt='avatar' />
+									<Image
+										src={user.avatar ?? avatarImg}
+										width={60}
+										height={60}
+										alt='avatar'
+									/>
 								</div>
 							</div>
 						</div>
