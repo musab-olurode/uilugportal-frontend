@@ -44,7 +44,7 @@ const Page = ({ children, user }: { children: any; user: IUserProfile }) => {
 							<div className='avatar'>
 								<div className='rounded-full w-10 h-10'>
 									<Image
-										src={user?.avatar || avatarImg}
+										src={user?.avatar ?? avatarImg}
 										width={60}
 										height={60}
 										alt='avatar'
@@ -59,7 +59,9 @@ const Page = ({ children, user }: { children: any; user: IUserProfile }) => {
 						<div className='flex flex-col w-full mt-4'>
 							{/* <div className='flex flex-row justify-between items-baseline'>
           </div> */}
-							<div className='text-1xl font-bold text-center'>Your Tasks Today</div>
+							<div className='text-1xl font-bold text-center'>
+								Your Tasks Today
+							</div>
 							<div className='divider mt-0'></div>
 						</div>
 

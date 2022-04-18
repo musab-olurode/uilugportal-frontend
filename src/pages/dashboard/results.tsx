@@ -84,21 +84,21 @@ const Results: NextPage<State> = ({ server }) => {
 		const response = await getResults({ session }, cookie.token);
 		if (response.success) {
 			let prevSemester = '';
-			let restucturedResults: any = {};
-			let resultsRelease = { count: 0, total: response.data.result.length };
-			response.data.result.map((result: IResult) => {
+			let restructuredResults: any = {};
+			let resultsRelease = { count: 0, total: response.data.results.length };
+			response.data.results.map((result: IResult) => {
 				if (prevSemester !== result.semester) {
 					prevSemester = result.semester;
-					restucturedResults[prevSemester] = [];
+					restructuredResults[prevSemester] = [];
 				}
 				if (result.grade) {
 					resultsRelease.count++;
 				}
-				restucturedResults[prevSemester].push(result);
+				restructuredResults[prevSemester].push(result);
 			});
-			setResults(restucturedResults);
+			setResults(restructuredResults);
 			setResultsReleased(resultsRelease);
-			calculateGPA(response.data.result);
+			calculateGPA(response.data.results);
 		} else {
 			toast.error(response.message);
 		}
@@ -106,7 +106,10 @@ const Results: NextPage<State> = ({ server }) => {
 	};
 
 	const getCGPA = async () => {
-		const response = await getCalculatedCGPA({ level: user.level }, cookie.token);
+		const response = await getCalculatedCGPA(
+			{ level: user.level },
+			cookie.token
+		);
 		if (response.success) {
 			setCGPA(response.data.cgpa);
 		} else {
@@ -128,22 +131,31 @@ const Results: NextPage<State> = ({ server }) => {
 					<div className='card-body p-5 flex flex-col md:flex-row'>
 						<div className='flex-grow md:mr-5 mt-4 md:mt-0'>
 							<p className='text-gray-400 dark:text-gray-300 font-bold text-2xl'>
-								<span className='text-primary'>{`${resultsReleased.count}`}</span> of
-								<span className='text-pink-500'>{` ${resultsReleased.total}`}</span> results
-								have been released
+								<span className='text-primary'>{`${resultsReleased.count}`}</span>{' '}
+								of
+								<span className='text-pink-500'>{` ${resultsReleased.total}`}</span>{' '}
+								results have been released
 							</p>
 							<progress
 								className='progress progress-secondary h-5 mt-4'
-								value={((resultsReleased.count / resultsReleased.total) * 100).toString()}
+								value={(
+									(resultsReleased.count / resultsReleased.total) *
+									100
+								).toString()}
 								max='100'></progress>
 						</div>
 						<div className='dropdown dropdown-hover dropdown-end'>
 							<div
 								tabIndex={0}
-								className='rounded-lg bg-gray-200 dark:bg-gray-500 font-bold text-3xl py-1 px-4 order-first md:order-2 text-center hover:cursor-pointer'>
+								className='rounded-lg bg-gray-200 dark:bg-gray-400 font-bold text-3xl py-1 px-4 order-first md:order-2 text-center hover:cursor-pointer'
+								onClick={() => setHideGP(!hideGP)}>
 								C.G.P.A <br />{' '}
 								<span className='text-primary'>
-									<Hideable shouldHide={hideGP} value={CGPA} toggleHidden={setHideGP} />
+									<Hideable
+										shouldHide={hideGP}
+										value={CGPA}
+										toggleHidden={setHideGP}
+									/>
 								</span>
 							</div>
 							<ul
@@ -177,7 +189,9 @@ const Results: NextPage<State> = ({ server }) => {
 				<div className='mt-6'>
 					<div className='flex flex-col w-full mt-6'>
 						<div className='flex flex-row justify-between items-baseline'>
-							<div className='text-lg md:text-2xl font-bold self-baseline'>Session</div>
+							<div className='text-lg md:text-2xl font-bold self-baseline'>
+								Session
+							</div>
 							<select
 								className='select select-bordered'
 								onChange={selectSession}

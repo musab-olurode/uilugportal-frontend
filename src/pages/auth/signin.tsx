@@ -15,7 +15,7 @@ import { useCookies } from 'react-cookie';
 import withoutAuth from '../../components/WithoutAuth';
 
 let loginSchema = Yup.object({
-	username: Yup.string().required('Required'),
+	matricNumber: Yup.string().required('Required'),
 	password: Yup.string().required('Required'),
 });
 
@@ -44,6 +44,8 @@ const SignIn = () => {
 			router.push('/dashboard');
 			setLoading(false);
 		} else {
+			console.log(response);
+
 			toast.error(response.message);
 			showLoading(false);
 			setLoading(false);
@@ -52,7 +54,7 @@ const SignIn = () => {
 
 	const loginData = useFormik({
 		initialValues: {
-			username: '',
+			matricNumber: '',
 			password: '',
 		},
 		onSubmit: async (values) => {
@@ -83,14 +85,15 @@ const SignIn = () => {
 							</p>
 							<div className='form-group'>
 								<input
-									id='username'
+									id='matricNumber'
 									type='text'
 									className='input input-primary'
 									placeholder='Matric Number'
-									{...loginData.getFieldProps('username')}
+									{...loginData.getFieldProps('matricNumber')}
 								/>
-								{loginData.touched.username && loginData.errors.username ? (
-									<ValidationError message={loginData.errors.username} />
+								{loginData.touched.matricNumber &&
+								loginData.errors.matricNumber ? (
+									<ValidationError message={loginData.errors.matricNumber} />
 								) : null}
 							</div>
 							<div className='form-group mt-2'>
@@ -137,8 +140,8 @@ const SignIn = () => {
 							</div>
 							<div className='flex justify-center'>
 								<span className='text-3xl text-white font-weight-bold w-[80%]'>
-									The UNILORIN student portal for practically anyone with a functioning pair
-									of eyes.
+									The UNILORIN student portal for practically anyone with a
+									functioning pair of eyes.
 								</span>
 							</div>
 						</div>
