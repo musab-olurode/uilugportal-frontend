@@ -1,0 +1,11 @@
+{
+	"watch": ["src"],
+	"ext": ".tsx,.jsx",
+	"ignore": ["node_modules/"],
+	"exec": "next dev",
+	"singleQuote": true,
+	"endOfLine": "auto",
+	"jsxSingleQuote": true,
+	"useTabs": true,
+	"bracketSameLine": true
+}

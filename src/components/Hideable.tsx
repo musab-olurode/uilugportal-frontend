@@ -1,3 +1,6 @@
+import { EyeOffIcon } from '@heroicons/react/outline';
+import clsx from 'clsx';
+
 const Hideable = ({
 	shouldHide,
 	value,
@@ -11,9 +14,11 @@ const Hideable = ({
 	className?: string;
 }) => {
 	return (
-		<span onClick={() => toggleHidden(!shouldHide)} className='hover:cursor-pointer'>
-			<span className={className ?? '-'} hidden={!shouldHide}>
-				-&bull;-
+		<span
+			className='hover:cursor-pointer'
+			onClick={() => toggleHidden(!shouldHide)}>
+			<span className={clsx(className)} hidden={!shouldHide}>
+				<EyeOffIcon className='w-9 h-9 mx-auto' />
 			</span>
 			{!shouldHide && value}
 		</span>
