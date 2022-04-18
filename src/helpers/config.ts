@@ -1,6 +1,5 @@
 const config = {
-	// configBaseServerUrl: 'https://uilugportal-backend.herokuapp.com/v1',
-	configBaseServerUrl: 'http://localhost:5000/v1',
+	configBaseServerUrl: process.env.NEXT_PUBLIC_SERVER_BASE_URL,
 };
 
 export default config;
