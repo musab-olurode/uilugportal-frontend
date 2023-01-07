@@ -7,7 +7,7 @@ export const getResults = async (payload: obj, token: string) => {
 		success: false,
 	};
 	await Axios.privateInstance(token)
-		.get('/user/results', { params: payload })
+		.get('/users/results', { params: payload })
 		.then((res) => {
 			response.success = true;
 			response.data = res.data.data;
@@ -23,7 +23,7 @@ export const getCalculatedCGPA = async (payload: obj, token: string) => {
 		success: false,
 	};
 	await Axios.privateInstance(token)
-		.get('/user/results/calculate-cgpa', { params: payload })
+		.get('/users/results/calculate-cgpa', { params: payload })
 		.then((res) => {
 			response.success = true;
 			response.data = res.data.data;
@@ -39,7 +39,7 @@ export const getPrintables = async (payload: obj, token: string) => {
 		success: false,
 	};
 	await Axios.privateInstance(token)
-		.get('/user/printables', { params: payload })
+		.get('/users/printables', { params: payload })
 		.then((res) => {
 			response.success = true;
 			response.data = res.data.data;
