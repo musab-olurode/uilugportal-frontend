@@ -5,6 +5,12 @@ const PrivacyPolicy = () => {
 	return (
 		<>
 			<Head>
+				<link
+					rel='preload'
+					href='/fonts/poppins/Poppins-Regular.ttf'
+					as='font'
+					crossOrigin=''
+				/>
 				<title>Privacy Policy</title>
 			</Head>
 			<div className='mx-auto max-w-[60rem] px-4 sm:px-8 md:px-0'>
