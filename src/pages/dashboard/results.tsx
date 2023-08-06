@@ -42,7 +42,8 @@ const Results: NextPage<State> = ({ server }) => {
 
 	const getSessions = () => {
 		let sessionYears: string[] = [];
-		let thisYear = new Date().getFullYear();
+		// subtract one to account for covid displacement
+		let thisYear = new Date().getFullYear() - 1;
 		for (let year = thisYear; year >= 2009; year--) {
 			let session = `${year - 1}/${year}`;
 			sessionYears.push(session.trim());

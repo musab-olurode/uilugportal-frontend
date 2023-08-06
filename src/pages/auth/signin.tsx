@@ -29,7 +29,8 @@ const SignIn = () => {
 	const { showLoading } = useLoadingProgress();
 	const [loading, setLoading] = useState(false);
 	const router = useRouter();
-	const [cookie, setCookie] = useCookies(['token']);
+	// eslint-disable-next-line no-unused-vars
+	const [_, setCookie] = useCookies(['token']);
 
 	const doLogin = async (values: any) => {
 		showLoading(true);
