@@ -1,7 +1,7 @@
 import Layout from '../../layouts/Layout';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ValidationError from '../../components/ValidationError';
 import PasswordInput from '../../components/PasswordInput';
 import loginBg from '../../../public/images/login-img.png';

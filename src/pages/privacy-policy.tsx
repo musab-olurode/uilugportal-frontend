@@ -132,9 +132,8 @@ const PrivacyPolicy = () => {
 					<p className='block mb-4'>
 						We may update this Privacy Policy from time to time. We will notify
 						you of any changes by posting the new Privacy Policy on this page.
-						You are advised to review this Privacy Policy periodically for any
-						changes. Your continued use of Probitas after the changes are made
-						will indicate your acceptance of the revised policy.
+						Your continued use of Probitas after the changes are made will
+						indicate your acceptance of the revised policy.
 					</p>
 
 					<strong className='block mb-2'>9. Contact Us</strong>
