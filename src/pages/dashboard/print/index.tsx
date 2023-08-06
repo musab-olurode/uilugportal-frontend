@@ -40,7 +40,8 @@ const Print: NextPage<State> = ({ server }) => {
 
 	const getSessions = () => {
 		let sessionYears: string[] = [];
-		let thisYear = new Date().getFullYear();
+		// subtract one to account for covid displacement
+		let thisYear = new Date().getFullYear() - 1;
 		for (let year = thisYear; year >= 2009; year--) {
 			let session = `${year - 1}/${year}`;
 			sessionYears.push(session.trim());
@@ -57,7 +58,10 @@ const Print: NextPage<State> = ({ server }) => {
 		return levels;
 	};
 
-	const getAllPrintables = async (session: string, levelForCourseForm: string) => {
+	const getAllPrintables = async (
+		session: string,
+		levelForCourseForm: string
+	) => {
 		let newPrintables: any;
 		showLoading(true);
 		const response = await getPrintables(
@@ -88,7 +92,9 @@ const Print: NextPage<State> = ({ server }) => {
 		setIsLoadingSelection(false);
 	};
 
-	const selectLevelForCourseForm = async (e: ChangeEvent<HTMLSelectElement>) => {
+	const selectLevelForCourseForm = async (
+		e: ChangeEvent<HTMLSelectElement>
+	) => {
 		const { value } = e.target;
 		setSelectedLevel(Number(value));
 	};
